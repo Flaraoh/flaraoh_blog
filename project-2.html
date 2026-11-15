@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Flaraoh · Case study · Flaraoh</title>
+  <meta name="description" content="Case study do site Flaraoh: portfólio e blog estático em HTML, CSS e JavaScript puro, com duas trilhas e deploy automático via cPanel.">
+  <meta name="theme-color" content="#FDF9ED">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=JetBrains+Mono:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 3 27h26L16 4Z" fill="none" stroke="#B8860B" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="19" r="2.8" fill="#8B4513"/></svg>
+        <span class="brand__name">Flaraoh</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label visually-hidden">Abrir menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 3 9.5 20"/></svg>Início</a></li>
+          <li><a class="site-nav__link" href="about.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>Sobre</a></li>
+          <li><a class="site-nav__link" href="games.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 12 12 21 3 12Z"/><path d="M12 8 16 12 12 16 8 12Z"/></svg>Game Design</a></li>
+          <li><a class="site-nav__link site-nav__link--dev" href="dev.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>Desenvolvimento</a></li>
+          <li><a class="site-nav__link" href="devlog.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h12a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4Z"/><path d="M9 9h7M9 13h7"/></svg>Diário</a></li>
+          <li><a class="site-nav__link" href="articles.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg>Artigos</a></li>
+          <li><a class="site-nav__link" href="contact.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 11C9.5 9 8.5 7 8.5 5.5a3.5 3.5 0 0 1 7 0C15.5 7 14.5 9 12 11Z"/><path d="M12 11v10M7 14h10"/></svg>Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article>
+      <header class="page-header container">
+        <p class="eyebrow"><a href="projects.html">Projetos</a> · Case study</p>
+        <h1 class="mt-0">Site Flaraoh</h1>
+        <div class="divider" aria-hidden="true"><span class="divider__gem"></span></div>
+        <p class="lead">Este site: um portfólio e blog estático, feito à mão em HTML, CSS e JavaScript puro, que apresenta duas trilhas, game design e desenvolvimento, sem que uma apague a outra.</p>
+      </header>
+
+      <div class="container">
+        <figure class="project-hero">
+          <a class="zoom" href="assets/img/blog-flaraoh/capa-inicio.jpg" data-zoom><img src="assets/img/blog-flaraoh/capa-inicio.jpg" alt="Página inicial do site Flaraoh: menu com as duas trilhas, título FLARAOH gravado em pedra, texto de apresentação e os botões Game Design e Desenvolvimento" width="1600" height="1000" fetchpriority="high" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+        </figure>
+      </div>
+
+      <div class="container container--narrow mt-7">
+        <div class="plaque plaque--compact chamber chamber--dev">
+          <dl class="meta-list">
+            <div><dt>Papel</dt><dd>Design e desenvolvimento front-end</dd></div>
+            <div><dt>Duração</dt><dd>Desde outubro de 2026, em evolução</dd></div>
+            <div><dt>Equipe</dt><dd>Solo</dd></div>
+            <div><dt>Plataforma</dt><dd>Web (desktop e celular)</dd></div>
+          </dl>
+          <ul class="tag-list mt-6" aria-label="Tecnologias usadas">
+            <li class="tag tag--mono">HTML</li><li class="tag tag--mono">CSS</li><li class="tag tag--mono">JavaScript</li><li class="tag tag--mono">Git &amp; GitHub</li><li class="tag tag--mono">cPanel</li><li class="tag tag--mono">Claude Code</li>
+          </ul>
+        </div>
+
+        <div class="plaque mt-6">
+          <div class="prose">
+            <h2 class="mt-0">Visão geral</h2>
+            <p>O site reúne projetos, diário de desenvolvimento, artigos e contato, com a persona Flaraoh: pirâmide, templo, câmaras e areia. Ele começou apresentando só game design e foi reorganizado em duas trilhas, cada uma com sua página, sua cor de destaque e seus projetos.</p>
+
+            <h2 id="conceber">1. Conceber</h2>
+            <p>O problema: apresentar alguém em transição de carreira com dois perfis num site só. Quem chega por uma vaga de games precisa achar game design rápido; quem chega por uma vaga de tecnologia precisa achar código. O público são recrutadores, estúdios e empresas.</p>
+            <p>Restrições:</p>
+            <ul>
+              <li>HTML, CSS e JavaScript puro, sem frameworks, bibliotecas ou etapa de build;</li>
+              <li>hospedagem compartilhada, com publicação simples;</li>
+              <li>responsivo e acessível, inclusive por teclado e leitor de tela;</li>
+              <li>uma identidade visual própria e consistente em todas as páginas.</li>
+            </ul>
+
+            <h2 id="desenvolver">2. Desenvolver</h2>
+            <ol>
+              <li><strong>Identidade em variáveis CSS.</strong> Paleta "Deserto Dourado", quatro famílias de fonte, espaçamentos e sombras ficam no <code>:root</code>. Placas com moldura dupla, separadores com losango e cards são componentes reutilizados em todas as páginas.</li>
+              <li><strong>Duas trilhas com cor própria.</strong> Dourado e marrom para game design, verde-petróleo para desenvolvimento. Um projeto das duas áreas ganha card diferente em cada trilha e um case study com duas portas de entrada.</li>
+              <li><strong>Filtros em JavaScript puro.</strong> Um só componente filtra projetos por trilha e artigos por categoria, com <code>aria-pressed</code>, aviso para leitor de tela e parâmetro na URL (<code>?trilha=dev</code>) para abrir já filtrado.</li>
+              <li><strong>Formulário de contato acessível.</strong> Erros ligados a cada campo, assunto pré-selecionado pela URL e um campo-armadilha contra spam.</li>
+              <li><strong>Deploy automático.</strong> Cada push no Git publica o site pelo cPanel, que copia as páginas e os arquivos para a hospedagem.</li>
+            </ol>
+
+            <h2 id="testar">3. Testar</h2>
+            <p>As páginas foram revisadas no Chrome e capturadas em modo headless para conferir o resultado final. O site também foi pensado para funcionar sem JavaScript:</p>
+            <ul>
+              <li>o menu fica sempre visível e o formulário usa a validação do próprio navegador;</li>
+              <li>a barra de filtros some e todos os itens aparecem.</li>
+            </ul>
+            <p>Os pares de cor principais têm contraste alto: texto <code>#333</code> sobre areia (cerca de 12:1) e botões claros sobre marrom (cerca de 7:1). O dourado fica só em detalhes decorativos, nunca em texto.</p>
+
+            <figure class="figure">
+              <a class="zoom" href="assets/img/blog-flaraoh/filtro-portfolio.jpg" data-zoom><img src="assets/img/blog-flaraoh/filtro-portfolio.jpg" alt="Página de portfólio com os botões de filtro Todos, Game Design e Desenvolvimento, este último selecionado em verde-petróleo" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>Portfólio aberto com <code>?trilha=dev</code>: o filtro já chega selecionado.</figcaption>
+            </figure>
+
+            <h2 id="melhorar">4. Melhorar</h2>
+            <p>O site evoluiu em etapas, cada uma registrada no Git:</p>
+            <ul>
+              <li><strong>Reestruturação</strong> em Projetos, Diário, Artigos e Divulgações, com a página inicial em blocos.</li>
+              <li><strong>Duas trilhas:</strong> páginas de Game Design e Desenvolvimento, menu novo, filtros e o campo de assunto no contato.</li>
+              <li><strong>Projetos reais no lugar dos exemplos:</strong> os projetos fictícios saíram e entrou o primeiro case study real.</li>
+              <li><strong>Leitura por trilha:</strong> o mesmo projeto passou a ter um card e uma porta de entrada para cada perfil de visitante.</li>
+            </ul>
+
+            <h2>Resultados</h2>
+          </div>
+
+          <ul class="stats mt-6">
+            <li><strong>12</strong><span>páginas, sem nenhum framework</span></li>
+            <li><strong>0</strong><span>dependências ou etapa de build</span></li>
+            <li><strong>~41 KB</strong><span>de CSS e JavaScript somados, sem compressão</span></li>
+            <li><strong>2</strong><span>trilhas com cor, página e filtros próprios</span></li>
+          </ul>
+
+          <div class="prose mt-6">
+            <h2 id="aprendi">O que aprendi</h2>
+            <ul>
+              <li>[PREENCHER: aprendizado]</li>
+              <li>[PREENCHER: aprendizado]</li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="mt-7" aria-labelledby="galeria-title">
+          <h2 id="galeria-title" class="text-center engraved--subtle">Galeria</h2>
+          <div class="divider" aria-hidden="true"><span class="divider__gem"></span></div>
+          <div class="gallery">
+            <figure class="figure">
+              <a class="zoom" href="assets/img/blog-flaraoh/duas-camaras.jpg" data-zoom><img src="assets/img/blog-flaraoh/duas-camaras.jpg" alt="Seção Duas câmaras, um mesmo arquiteto: dois cards lado a lado, Game Design com borda dourada e Desenvolvimento com borda verde-petróleo" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>As duas trilhas na página inicial.</figcaption>
+            </figure>
+            <figure class="figure">
+              <a class="zoom" href="assets/img/blog-flaraoh/trilha-dev.jpg" data-zoom><img src="assets/img/blog-flaraoh/trilha-dev.jpg" alt="Página da trilha Desenvolvimento com o bloco O que faço nesta câmara: back-end em C#, front-end sem bibliotecas e testes e simulação" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>A página da trilha Desenvolvimento.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="pager" aria-label="Navegação de projetos">
+          <a class="link-arrow" href="projects.html">Voltar aos projetos</a>
+          <a class="btn btn--ghost" href="index.html">Ir para o início</a>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">Flaraoh</p>
+        <p>Construindo sistemas, em jogos e em software, um de cada vez.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="site-footer__heading">Navegue</h2>
+        <ul class="site-footer__links">
+          <li><a href="games.html">Game Design</a></li>
+          <li><a href="dev.html">Desenvolvimento</a></li>
+          <li><a href="projects.html">Portfólio</a></li>
+          <li><a href="devlog.html">Diário</a></li>
+          <li><a href="articles.html">Artigos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="spotlight.html">Divulgações</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="site-footer__heading">Conecte-se</h2>
+        <ul class="site-footer__links">
+          <li><a href="https://www.linkedin.com/in/fl%C3%A1vio-spinelli" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Flaraoh" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="site-footer__copy">© <span data-year>2026</span> Flaraoh. Feito à mão, sem maldições.</p>
+    </div>
+  </footer>
+</body>
+</html>

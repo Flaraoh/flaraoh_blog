@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon Fan Battle · Case study · Flaraoh</title>
+  <meta name="description" content="Case study de Pokémon Fan Battle: jogo web de batalhas por turnos em C# e ASP.NET Core, com balanceamento calibrado por simulação.">
+  <meta name="theme-color" content="#FDF9ED">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=JetBrains+Mono:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 3 27h26L16 4Z" fill="none" stroke="#B8860B" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="19" r="2.8" fill="#8B4513"/></svg>
+        <span class="brand__name">Flaraoh</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label visually-hidden">Abrir menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 3 9.5 20"/></svg>Início</a></li>
+          <li><a class="site-nav__link" href="about.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>Sobre</a></li>
+          <li><a class="site-nav__link" href="games.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 12 12 21 3 12Z"/><path d="M12 8 16 12 12 16 8 12Z"/></svg>Game Design</a></li>
+          <li><a class="site-nav__link site-nav__link--dev" href="dev.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>Desenvolvimento</a></li>
+          <li><a class="site-nav__link" href="devlog.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h12a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4Z"/><path d="M9 9h7M9 13h7"/></svg>Diário</a></li>
+          <li><a class="site-nav__link" href="articles.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg>Artigos</a></li>
+          <li><a class="site-nav__link" href="contact.html"><svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 11C9.5 9 8.5 7 8.5 5.5a3.5 3.5 0 0 1 7 0C15.5 7 14.5 9 12 11Z"/><path d="M12 11v10M7 14h10"/></svg>Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article>
+      <header class="page-header container">
+        <p class="eyebrow"><a href="projects.html">Projetos</a> · Case study</p>
+        <h1 class="mt-0">Pokémon Fan Battle</h1>
+        <div class="divider" aria-hidden="true"><span class="divider__gem"></span></div>
+        <p class="lead">Um jogo de batalhas Pokémon por turnos no navegador, em que montar a equipe pesa tanto quanto lutar, e cujo balanceamento foi calibrado por simulação.</p>
+      </header>
+
+      <div class="container">
+        <figure class="project-hero">
+          <a class="zoom" href="assets/img/pokemon-fan-battle/capa-inicio.jpg" data-zoom><img src="assets/img/pokemon-fan-battle/capa-inicio.jpg" alt="Página inicial do Pokémon Fan Battle: logo, chamada &quot;Monte sua equipe. Vença no detalhe.&quot; e uma equipe de exemplo com seis Pokémon somando 11 de 15 estrelas" width="1600" height="1000" fetchpriority="high" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+        </figure>
+      </div>
+
+      <div class="container container--narrow mt-7">
+        <div class="plaque plaque--compact">
+          <dl class="meta-list">
+            <div><dt>Papel</dt><dd>Game design e desenvolvimento full-stack</dd></div>
+            <div><dt>Duração</dt><dd>2 semanas</dd></div>
+            <div><dt>Equipe</dt><dd>Solo</dd></div>
+            <div><dt>Plataforma</dt><dd>Web (desktop e celular)</dd></div>
+          </dl>
+          <ul class="tag-list mt-6" aria-label="Tecnologias usadas">
+            <li class="tag tag--mono">C#</li><li class="tag tag--mono">ASP.NET Core Razor Pages (.NET 10)</li><li class="tag tag--mono">HTML</li><li class="tag tag--mono">CSS</li><li class="tag tag--mono">JavaScript</li><li class="tag tag--mono">PowerShell</li><li class="tag tag--mono">PokéAPI</li><li class="tag tag--mono">Git &amp; GitHub</li><li class="tag tag--mono">Claude Code</li>
+          </ul>
+        </div>
+
+        <!-- Duas portas de entrada: games.html abre em #olhar-games, dev.html em #olhar-dev -->
+        <div class="grid grid--2 split mt-6">
+          <section id="olhar-games" class="plaque plaque--compact chamber" aria-labelledby="olhar-games-title">
+            <p class="eyebrow">Pelo olhar do</p>
+            <h2 id="olhar-games-title" class="fs-h3">Game design</h2>
+            <ul class="prose prose--compact">
+              <li><a href="#conceber">Objetivo</a>: montar a equipe pesar tanto quanto lutar, sem que os seis mais fortes sejam a resposta óbvia.</li>
+              <li><a href="#desenvolver">Orçamento de 15 estrelas</a> para 6 Pokémon, com custos de 1 a 5 definidos por uma simulação de todos contra todos.</li>
+              <li><a href="#testar">15 treinadores em três dificuldades</a>, medidos com 400 equipes por perfil de jogador.</li>
+              <li><a href="#melhorar">Dano calibrado</a>: nocautes em um golpe de 82% para 15% e vantagem de atacar primeiro de 87,5% para 63%.</li>
+            </ul>
+          </section>
+          <section id="olhar-dev" class="plaque plaque--compact chamber chamber--dev" aria-labelledby="olhar-dev-title">
+            <p class="eyebrow">Pelo olhar do</p>
+            <h2 id="olhar-dev-title" class="fs-h3">Desenvolvimento</h2>
+            <ul class="prose prose--compact">
+              <li><a href="#desenvolver">Motor de batalha em C#</a> no servidor (ASP.NET Core), que valida todas as jogadas.</li>
+              <li><a href="#aprendi">Regras num só lugar</a>, reaproveitadas no bot, nas páginas e nos testes.</li>
+              <li><a href="#conceber">Front-end sem bibliotecas</a>, em HTML, CSS e JavaScript, para celular e teclado.</li>
+              <li><a href="#testar">263 testes automatizados</a>, parte no Edge ou no Chrome headless, de 320 a 1366 px.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="plaque mt-6">
+          <div class="prose">
+            <h2 class="mt-0">Visão geral</h2>
+            <p>O jogador monta uma equipe de 6 entre os 151 Pokémon de Kanto sem passar de 15 estrelas e enfrenta bots em três dificuldades, os 8 Ginásios e a Liga. Velocidade, tipos e o tempo de recarga dos ataques decidem cada partida. Construí tudo sozinho em 2 semanas, em 34 etapas. O projeto está concluído.</p>
+
+            <h2 id="conceber">1. Conceber</h2>
+            <p>O objetivo de design: uma batalha em que montar a equipe pese tanto quanto lutar, sem que a melhor escolha seja simplesmente pegar os seis Pokémon mais fortes. O público são fãs de Pokémon que gostam de estratégia rápida no navegador.</p>
+            <p>Restrições:</p>
+            <ul>
+              <li>rodar no navegador, sem instalação e sem conta (o progresso fica salvo no próprio navegador);</li>
+              <li>nenhuma biblioteca externa no front-end;</li>
+              <li>funcionar no celular e por teclado;</li>
+              <li>ser um projeto de fã, sem fins lucrativos.</li>
+            </ul>
+
+            <h2 id="desenvolver">2. Desenvolver</h2>
+            <ol>
+              <li><strong>Motor de batalha em C# no servidor.</strong> A ordem dos turnos vem da velocidade, há 18 tipos (com tipo duplo) e cada ataque tem tempo de recarga. O servidor valida todas as jogadas.</li>
+              <li><strong>Orçamento de 15 estrelas para 6 Pokémon</strong>, com custo fixo de 1 a 5 estrelas por espécie. Os custos dos 151 saíram de uma simulação em que todos enfrentam todos.</li>
+              <li><strong>Bots com três estratégias</strong> (Fácil, Normal e Difícil): 15 treinadores no modo Casual e uma campanha com 8 Ginásios de equipes fixas.</li>
+              <li><strong>Liga Pokémon como desafio final.</strong> A chave é eliminatória e uma derrota tira uma insígnia, que precisa ser recuperada no Ginásio, com validação no servidor.</li>
+              <li><strong>Pokédex completa e página de tipos.</strong> A Pokédex tem busca e filtros por tipo e custo, e a tabela de efetividade é gerada da mesma fonte que o motor usa.</li>
+            </ol>
+
+            <h2 id="testar">3. Testar</h2>
+            <p><strong>263 testes automatizados</strong> cobrem regras, motor, páginas e navegador. Parte deles abre o Edge ou o Chrome em modo headless para conferir o layout de 320 a 1366 px sem rolagem horizontal, alvos de toque de 44 px e fluxos reais de batalha.</p>
+            <p>Para o balanceamento, a escala de dano foi testada em 22.650 confrontos, e a taxa de vitória contra cada treinador foi medida com 400 equipes por perfil de jogador. Antes da calibração, as simulações mostraram dois problemas:</p>
+            <ul>
+              <li>82% dos confrontos terminavam com um golpe só;</li>
+              <li>quem atacava primeiro vencia 87,5% das vezes.</li>
+            </ul>
+
+            <figure class="figure">
+              <a class="zoom" href="assets/img/pokemon-fan-battle/processo-balanceamento.jpg" data-zoom><img src="assets/img/pokemon-fan-battle/processo-balanceamento.jpg" alt="Saída de terminal da simulação que avalia os 15 treinadores do modo Casual: taxa de vitória do jogador por treinador e por perfil de equipe, agrupada em Fácil, Normal e Difícil" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>Saída real da simulação que calibra os 15 treinadores: 400 equipes de jogador por perfil.</figcaption>
+            </figure>
+
+            <h2 id="melhorar">4. Melhorar</h2>
+            <ul>
+              <li><strong>Dano calibrado (escala 0,2).</strong> Os nocautes em um golpe caíram de 82% para 15% e a vantagem de atacar primeiro, de 87,5% para 63%, mantendo a proporção entre os tipos.</li>
+              <li><strong>Custos refeitos por simulação</strong>, para que os seis melhores Pokémon não caibam juntos no orçamento.</li>
+              <li><strong>Treinadores ajustados por nível.</strong> A taxa de vitória do jogador ficou em 99–100% no Fácil, 60–74% no Normal e 41–59% no Difícil.</li>
+              <li><strong>Uma etapa dedicada à acessibilidade:</strong> foco visível, anúncios para leitor de tela, ícones junto das cores e respeito à preferência de reduzir movimento.</li>
+            </ul>
+
+            <h2>Resultados</h2>
+            <p>O jogo não foi publicado, então não há números de usuários. Estes são os resultados internos verificáveis:</p>
+          </div>
+
+          <ul class="stats mt-6">
+            <li><strong>151</strong><span>espécies jogáveis</span></li>
+            <li><strong>263</strong><span>testes automatizados passando</span></li>
+            <li><strong>82% → 15%</strong><span>nocautes em um golpe após a calibração</span></li>
+            <li><strong>3</strong><span>dificuldades calibradas por simulação</span></li>
+          </ul>
+
+          <div class="prose mt-6">
+            <h2 id="aprendi">O que aprendi</h2>
+            <ul>
+              <li>Balancear um jogo com dados, usando simulações repetíveis em vez de intuição.</li>
+              <li>Manter as regras do jogo num só lugar, no servidor, e reaproveitá-las no bot, nas páginas e nos testes.</li>
+              <li>Acessibilidade e responsividade custam menos quando entram cedo e são cobertas por testes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="mt-7" aria-labelledby="galeria-title">
+          <h2 id="galeria-title" class="text-center engraved--subtle">Galeria</h2>
+          <div class="divider" aria-hidden="true"><span class="divider__gem"></span></div>
+          <div class="gallery">
+            <figure class="figure">
+              <a class="zoom" href="assets/img/pokemon-fan-battle/batalha.jpg" data-zoom><img src="assets/img/pokemon-fan-battle/batalha.jpg" alt="Batalha em andamento entre Charizard e Raichu, com barras de HP, tipos, velocidade, a lista de ataques com poder e cooldown e as duas equipes nas laterais" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>Batalha em andamento: HP, tipos e cooldowns de cada ataque.</figcaption>
+            </figure>
+            <figure class="figure">
+              <a class="zoom" href="assets/img/pokemon-fan-battle/pokedex.jpg" data-zoom><img src="assets/img/pokemon-fan-battle/pokedex.jpg" alt="Pokédex com busca por nome ou número, filtros por tipo e custo e cards de Bulbasaur, Ivysaur e Venusaur com atributos, custo em estrelas e ataques" width="1600" height="1000" loading="lazy" decoding="async"><span class="visually-hidden"> (ampliar imagem)</span></a>
+              <figcaption>Pokédex com busca, filtros e os atributos de cada espécie.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <p class="field__hint text-center mt-7 mx-auto">Projeto de fã, sem fins lucrativos e sem ligação com Nintendo, Game Freak, Creatures Inc. ou The Pokémon Company.</p>
+
+        <nav class="pager" aria-label="Navegação de projetos">
+          <a class="link-arrow" href="projects.html">Voltar aos projetos</a>
+          <a class="btn" href="https://github.com/Flaraoh/pokemon-fan-battle" rel="noopener">Ver o código no GitHub</a>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__brand">Flaraoh</p>
+        <p>Construindo sistemas, em jogos e em software, um de cada vez.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="site-footer__heading">Navegue</h2>
+        <ul class="site-footer__links">
+          <li><a href="games.html">Game Design</a></li>
+          <li><a href="dev.html">Desenvolvimento</a></li>
+          <li><a href="projects.html">Portfólio</a></li>
+          <li><a href="devlog.html">Diário</a></li>
+          <li><a href="articles.html">Artigos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="spotlight.html">Divulgações</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="site-footer__heading">Conecte-se</h2>
+        <ul class="site-footer__links">
+          <li><a href="https://www.linkedin.com/in/fl%C3%A1vio-spinelli" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/Flaraoh" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="site-footer__copy">© <span data-year>2026</span> Flaraoh. Feito à mão, sem maldições.</p>
+    </div>
+  </footer>
+</body>
+</html>
